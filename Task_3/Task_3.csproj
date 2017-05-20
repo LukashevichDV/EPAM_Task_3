@@ -43,17 +43,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BillingSystem\RenderReport.cs" />
+    <Compile Include="BillingSystem\Contract.cs" />
+    <Compile Include="BillingSystem\RecordReport.cs" />
+    <Compile Include="BillingSystem\Report.cs" />
     <Compile Include="BillingSystem\Subscriber.cs" />
     <Compile Include="BillingSystem\Tariff.cs" />
+    <Compile Include="Enum\CallType.cs" />
+    <Compile Include="Enum\SortType.cs" />
+    <Compile Include="Enum\TariffType.cs" />
+    <Compile Include="Interfaces\IContract.cs" />
+    <Compile Include="Interfaces\IRenderReport.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Interfaces\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
