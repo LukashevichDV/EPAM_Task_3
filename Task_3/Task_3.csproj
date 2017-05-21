@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ATE\CallInformation.cs" />
+    <Compile Include="BillingSystem\BillingSystem.cs" />
     <Compile Include="BillingSystem\RenderReport.cs" />
     <Compile Include="BillingSystem\Contract.cs" />
     <Compile Include="BillingSystem\RecordReport.cs" />
@@ -52,8 +54,10 @@
     <Compile Include="Enum\CallType.cs" />
     <Compile Include="Enum\SortType.cs" />
     <Compile Include="Enum\TariffType.cs" />
+    <Compile Include="Interfaces\IBillingSystem.cs" />
     <Compile Include="Interfaces\IContract.cs" />
     <Compile Include="Interfaces\IRenderReport.cs" />
+    <Compile Include="Interfaces\IStorage.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
