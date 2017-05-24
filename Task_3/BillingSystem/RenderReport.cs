@@ -10,12 +10,6 @@ namespace Task_3.BillingSystem
     public class RenderReport : IRenderReport
     {
 
-        public RenderReport()
-        {
-
-        }
-
-
         public void Render(Report report)
         {
             foreach (var record in report.GetRecords())
@@ -32,22 +26,22 @@ namespace Task_3.BillingSystem
             switch (sortType)
             {
                 case SortType.SortByCallType:
-                    return rep = rep.
+                    return rep.
                         OrderBy(x => x.CallType).
                         ToList();
 
                 case SortType.SortByDate:
-                    return rep = rep.
+                    return rep.
                         OrderBy(x => x.Date).
                         ToList();
 
                 case SortType.SortByCost:
-                    return rep = rep
+                    return rep
                         .OrderBy(x => x.Cost)
                         .ToList();
 
                 case SortType.SortByNumber:
-                    return rep = rep.
+                    return rep.
                         OrderBy(x => x.Number).
                         ToList();
 

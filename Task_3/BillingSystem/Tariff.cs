@@ -15,21 +15,21 @@ namespace Task_3.BillingSystem
             TariffType = type;
             switch (TariffType)
             {
-                case Enum.TariffType.Small:
+                case TariffType.Small:
                     {
                         CostByMonth = 10;
                         CostOfCallPerMinute = 10;
                         LimitMinutesInMonth = 10;
                         break;
                     }
-                case Enum.TariffType.Medium:
+                case TariffType.Medium:
                     {
                         CostByMonth = 20;
                         CostOfCallPerMinute = 20;
                         LimitMinutesInMonth = 20;
                         break;
                     }
-                case Enum.TariffType.Big:
+                case TariffType.Big:
                     {
                         CostByMonth = 30;
                         CostOfCallPerMinute = 30;
