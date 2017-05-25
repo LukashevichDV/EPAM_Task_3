@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Task_3.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -43,9 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ATE\CallInformation.cs" />
-    <Compile Include="ATE\Port.cs" />
-    <Compile Include="ATE\Terminal.cs" />
+    <Compile Include="AutoTelephoneExchange\ATE.cs" />
+    <Compile Include="AutoTelephoneExchange\CallInformation.cs" />
+    <Compile Include="AutoTelephoneExchange\Port.cs" />
+    <Compile Include="AutoTelephoneExchange\Terminal.cs" />
     <Compile Include="BillingSystem\BillingSystem.cs" />
     <Compile Include="BillingSystem\RenderReport.cs" />
     <Compile Include="BillingSystem\Contract.cs" />

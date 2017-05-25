@@ -78,11 +78,9 @@ namespace Task_3.ATE
 
         public void ConnectToPort()
         {
-            if (TerminalPort.Connect(this))
-            {
-                TerminalPort.CallPortEvent += TakeIncomingCall;
-                TerminalPort.AnswerPortEvent += TakeAnswer;
-            }
+            if (!TerminalPort.Connect(this)) return;
+            TerminalPort.CallPortEvent += TakeIncomingCall;
+            TerminalPort.AnswerPortEvent += TakeAnswer;
         }
 
 
