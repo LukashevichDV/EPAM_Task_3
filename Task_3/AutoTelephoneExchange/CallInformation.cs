@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Task_3.ATE
+namespace Task_3.AutoTelephoneExchange
 {
     public class CallInformation
     {

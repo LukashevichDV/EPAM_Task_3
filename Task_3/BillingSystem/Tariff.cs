@@ -7,7 +7,7 @@ namespace Task_3.BillingSystem
         public int CostByMonth { get; private set; }
         public int CostOfCallPerMinute { get; private set; }
         public int LimitMinutesInMonth { get; private set; }
-        public TariffType TariffType { get; private set; }
+        public TariffType TariffType { get; }
 
 
         public Tariff(TariffType type)

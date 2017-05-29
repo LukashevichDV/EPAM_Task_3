@@ -5,9 +5,9 @@ namespace Task_3.MyEventArgs
 {
     public class CallEventArgs : EventArgs, ICallingEventArgs
     {
-        public int TelephoneNumber { get; private set; }
-        public int TargetTelephoneNumber { get; private set; }
-        public Guid Id { get; private set; }
+        public int TelephoneNumber { get; }
+        public int TargetTelephoneNumber { get; }
+        public Guid Id { get; }
 
 
         public CallEventArgs(int number, int target)

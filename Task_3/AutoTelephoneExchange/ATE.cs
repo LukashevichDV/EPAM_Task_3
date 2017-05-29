@@ -6,7 +6,7 @@ using Task_3.Enum;
 using Task_3.Interfaces;
 using Task_3.MyEventArgs;
 
-namespace Task_3.ATE
+namespace Task_3.AutoTelephoneExchange
 {
     public class Ate : IATE
     {
@@ -47,8 +47,8 @@ namespace Task_3.ATE
                 CallInformation inf = null;
                 Port targetPort;
                 Port port;
-                int number = 0;
-                int targetNumber = 0;
+                int number;
+                int targetNumber;
                 if (e is EndCallEventArgs)
                 {
                     var callListFirst = CallList.First(x => x.Id.Equals(e.Id));
@@ -82,7 +82,6 @@ namespace Task_3.ATE
                     var eventArgs = e as AnswerEventArgs;
                     if (eventArgs != null)
                     {
-
                         var answerArgs = eventArgs;
 
                         if (!answerArgs.Id.Equals(Guid.Empty) && CallList.Any(x => x.Id.Equals(answerArgs.Id)))
@@ -148,11 +147,11 @@ namespace Task_3.ATE
             }
             else if (!UsersData.ContainsKey(e.TargetTelephoneNumber))
             {
-                Console.WriteLine("You have calling a non-existent number!!!");
+                Console.WriteLine("You have calling on non-existent number");
             }
             else
             {
-                Console.WriteLine("You have calling a your number!!!");
+                Console.WriteLine("You have calling on your number");
             }
         }
 

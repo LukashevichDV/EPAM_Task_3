@@ -10,8 +10,8 @@ namespace Task_3.BillingSystem
         static Random randomNumeral = new Random();
 
 
-        public Subscriber Subscriber { get; private set; }
-        public int Number { get; private set; }
+        public Subscriber Subscriber { get; }
+        public int Number { get; }
         public Tariff Tariff { get; private set; }
         private DateTime LastTariffUpdateDate;
 
@@ -31,12 +31,12 @@ namespace Task_3.BillingSystem
             {
                 LastTariffUpdateDate = DateTime.Now;
                 Tariff = new Tariff(tariffType);
-                Console.WriteLine("Tariff has been changed !");
+                Console.WriteLine("Tariff has been changed");
                 return true;
             }
             else
             {
-                Console.WriteLine("You can't change tariff in this month !");
+                Console.WriteLine("You can't change tariff in this month");
                 return false;
             }
         }

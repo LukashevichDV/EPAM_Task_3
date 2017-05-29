@@ -2,7 +2,7 @@
 using Task_3.Enum;
 using Task_3.MyEventArgs;
 
-namespace Task_3.ATE
+namespace Task_3.AutoTelephoneExchange
 {
     public class Terminal
     {
@@ -101,11 +101,11 @@ namespace Task_3.ATE
             Id = e.Id;
             if (e.StateInCall == CallState.Answered)
             {
-                Console.WriteLine("Terminal with number: {0}, have answer on call a number: {1}", e.TelephoneNumber, e.TargetTelephoneNumber);
+                Console.WriteLine("Terminal with number: {0}, have answered to a number: {1}", e.TelephoneNumber, e.TargetTelephoneNumber);
             }
             else
             {
-                Console.WriteLine("Terminal with number: {0}, have rejected call", e.TelephoneNumber);
+                Console.WriteLine("Terminal with number: {0}, have hung up", e.TelephoneNumber);
             }
         }
     }

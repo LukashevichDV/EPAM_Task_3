@@ -2,7 +2,7 @@
 using Task_3.Enum;
 using Task_3.MyEventArgs;
 
-namespace Task_3.ATE
+namespace Task_3.AutoTelephoneExchange
 {
 
     public class Port

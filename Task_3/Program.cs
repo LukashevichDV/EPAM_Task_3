@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Threading;
-using Task_3.ATE;
+using Task_3.AutoTelephoneExchange;
 using Task_3.BillingSystem;
 using Task_3.Interfaces;
 
@@ -15,8 +15,8 @@ namespace Task_3
             IBillingSystem bs = new BillingSystem.BillingSystem(ate);
 
             IContract c1 = ate.RegisterContract(new Subscriber("Name", "Lastname"), Enum.TariffType.Small);
-            IContract c2 = ate.RegisterContract(new Subscriber("Name1", "Lastname1"), Enum.TariffType.Small);
-            IContract c3 = ate.RegisterContract(new Subscriber("Name2", "Lastname2"), Enum.TariffType.Small);
+            IContract c2 = ate.RegisterContract(new Subscriber("Name1", "Lastname1"), Enum.TariffType.Medium);
+            IContract c3 = ate.RegisterContract(new Subscriber("Name2", "Lastname2"), Enum.TariffType.Big);
 
             c1.Subscriber.AddMoney(10);
             var t1 = ate.GetNewTerminal(c1);
@@ -28,7 +28,7 @@ namespace Task_3
             t3.ConnectToPort();
 
             t1.Call(t2.Number);
-            Thread.Sleep(5000);
+            Thread.Sleep(3000);
             t2.EndCall();
 
             t3.Call(t1.Number);
@@ -38,6 +38,7 @@ namespace Task_3
             t2.Call(t1.Number);
             Thread.Sleep(2000);
             t1.EndCall();
+
 
             Console.WriteLine();
             Console.WriteLine("Sorted records:");
